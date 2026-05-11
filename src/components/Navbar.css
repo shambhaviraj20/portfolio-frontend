@@ -25,6 +25,11 @@
   text-decoration: none;
 }
 
+.navbar__logo-img {
+  height: 36px;
+  width: auto;
+}
+
 .navbar__logo-text {
   font-family: var(--font-display);
   font-size: 1.6rem;
