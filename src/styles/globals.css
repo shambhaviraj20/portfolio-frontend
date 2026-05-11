@@ -1,0 +1,190 @@
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS — Blue Wave Palette
+   Extracted from uploaded background image
+═══════════════════════════════════════════════ */
+:root {
+  /* Core palette from the wave image */
+  --navy-deep:    #0d1b2a;
+  --navy-mid:     #1a3050;
+  --navy-slate:   #2a4a6b;
+  --wave-blue:    #3d6e8c;
+  --wave-light:   #7aaec2;
+  --wave-pale:    #b8d4e0;
+  --white-foam:   #e8f2f6;
+  --white:        #f5f9fb;
+
+  /* Accent */
+  --accent:       #7aaec2;
+  --accent-dim:   rgba(122, 174, 194, 0.25);
+
+  /* Typography */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  /* Spacing */
+  --section-pad: clamp(80px, 10vw, 140px);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ═══════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--navy-deep);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Remove cursor none on touch devices */
+@media (hover: none) {
+  body { cursor: auto; }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--wave-blue);
+  color: var(--white);
+}
+
+/* ═══════════════════════════════════════════════
+   SCROLLBAR
+═══════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--navy-deep); }
+::-webkit-scrollbar-thumb { background: var(--wave-blue); border-radius: 2px; }
+
+/* ═══════════════════════════════════════════════
+   UTILITY CLASSES
+═══════════════════════════════════════════════ */
+.display-font { font-family: var(--font-display); }
+.mono-font    { font-family: var(--font-mono); }
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+/* ═══════════════════════════════════════════════
+   MARQUEE
+═══════════════════════════════════════════════ */
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid rgba(122,174,194,0.15);
+  border-bottom: 1px solid rgba(122,174,194,0.15);
+  padding: 14px 0;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-scroll 25s linear infinite;
+  gap: 0;
+}
+
+.marquee-track--reverse {
+  animation-direction: reverse;
+}
+
+.marquee-track--slow {
+  animation-duration: 40s;
+}
+
+.marquee-item {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  letter-spacing: 0.05em;
+  color: var(--wave-pale);
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.marquee-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ═══════════════════════════════════════════════
+   DIVIDER LINE
+═══════════════════════════════════════════════ */
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(122,174,194,0.3) 20%,
+    rgba(122,174,194,0.3) 80%,
+    transparent
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease-out) forwards;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE HELPERS
+═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
