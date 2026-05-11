@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { personal } from '../data/resume';
 import './Navbar.css';
+import logo from '../assets/logo-removebg.png';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <a href="#" className="navbar__logo">
-        <span className="navbar__logo-text">SR</span>
+      <img src={logo} alt="Shambhavi Raj" className="navbar__logo-img" />
         {personal.available && (
           <span className="navbar__avail">
             <span className="navbar__avail-dot" />
