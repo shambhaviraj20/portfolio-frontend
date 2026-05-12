@@ -103,7 +103,7 @@ export const skills = {
   databases: ["MongoDB", "MySQL"],
   languages: ["Python", "Java", "JavaScript"],
   libraries: ["Scikit-learn", "Pandas", "NumPy"],
-  tools: ["Git", "GitHub", "Vercel", "RapidAPI", "Apify"],
+  tools: ["Git", "GitHub", "Vercel", "Figma", "RapidAPI", "Apify"],
 };
 
 export const skillsFlat = [
