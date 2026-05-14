@@ -97,7 +97,7 @@ export default function Hero() {
       {/* Stats row */}
       <div className="hero__stats">
         <div className="hero__stat">
-          <span className="hero__stat-num">9.07</span>
+          <span className="hero__stat-num">9.17</span>
           <span className="hero__stat-label">CGPA</span>
         </div>
         <div className="hero__stat-div" />
