@@ -9,7 +9,7 @@ export const personal = {
   email: "rajshambhavi13@gmail.com",
   available: true,
   availableText: "available for internships",
-  about: `Third-year Computer Science student focused on frontend and full stack development, with experience in building responsive dashboards, AI-integrated web apps, and scalable interfaces using React.js, Tailwind CSS, Flask, and Node.js. Dedicated to creating intuitive user experiences and visually refined web platforms.`,
+  about: `Final-year Computer Science student focused on frontend and full stack development, with experience in building responsive dashboards, AI-integrated web apps, and scalable interfaces using React.js, Tailwind CSS, Flask, and Node.js. Dedicated to creating intuitive user experiences and visually refined web platforms.`,
   links: {
     linkedin: "https://www.linkedin.com/in/shambhavi-raj/",
     github: "https://github.com/shambhaviraj20",
@@ -81,7 +81,7 @@ export const education = [
     degree: "B.Tech CSE (IoT, Cybersecurity & Blockchain)",
     institution: "Vishwakarma Institute of Information Technology, Pune",
     year: "2023 – Present",
-    score: "CGPA 9.07",
+    score: "CGPA 9.17",
   },
   {
     degree: "High School (Class XII)",
